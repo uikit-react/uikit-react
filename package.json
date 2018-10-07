@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "storybook": "start-storybook -p 9000 -c .storybook",
-    "test": "eslint \"./**\""
+    "test": "eslint --ext .jsx --ext .js ."
   },
   "repository": {
     "type": "git",
