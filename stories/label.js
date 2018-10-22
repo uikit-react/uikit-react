@@ -6,24 +6,24 @@ import Label from './../src/components/Label'
 storiesOf('Label', module)
   .add('Standard', () => (
     <Label
-      label='Standard'
+      children='Standard'
     />
   ))
   .add('Succes', () => (
     <Label
-      label='Succes'
+      children='Succes'
       type='success'
     />
   ))
   .add('Warning', () => (
     <Label
-      label='Warning'
+      children='Warning'
       type='warning'
     />
   ))
   .add('Danger', () => (
     <Label
-      label='Danger'
+      children='Danger'
       type='danger'
     />
   ))

@@ -8,18 +8,20 @@ const Flex = ({
   verticalAlignement,
   directionModifiers,
   wrapModifiers,
+  wrapModifiersAlignment,
   itemOrder,
   itemDimensions
 }) => (
   <div
     className={`
       ${isInline ? 'uk-flex-inline' : 'uk-flex'} 
+      ${wrapModifiers && `uk-flex-${wrapModifiers}`} 
+      ${wrapModifiersAlignment && `uk-flex-${wrapModifiersAlignment}`} 
       ${horizontalAlignement && `uk-flex-${horizontalAlignement}`} 
       ${verticalAlignement && `uk-flex-${verticalAlignement}`} 
       ${directionModifiers && `uk-flex-${directionModifiers}`} 
-      ${wrapModifiers && `uk-flex${wrapModifiers}`} 
-      ${itemOrder && `uk-flex${itemOrder}`} 
-      ${itemDimensions && `uk-flex${itemDimensions}`} 
+      ${itemOrder && `uk-flex-${itemOrder}`} 
+      ${itemDimensions && `uk-flex-${itemDimensions}`} 
     `}
   >
     {children}
@@ -27,7 +29,7 @@ const Flex = ({
 )
 
 Flex.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.node,
   isInline: PropTypes.bool.isRequired,
   horizontalAlignement: PropTypes.oneOf([
     'left',
@@ -71,7 +73,9 @@ Flex.propTypes = {
   wrapModifiers: PropTypes.oneOf([
     'wrap',
     'wrap-reverse',
-    'nowrap',
+    'nowrap'
+  ]),
+  wrapModifiersAlignment: PropTypes.oneOf([
     'wrap-stretch',
     'wrap-between',
     'wrap-around',

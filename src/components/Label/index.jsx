@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Label = ({
   type,
-  label
+  children
 }) => (
   <span
     className={`
@@ -11,7 +11,7 @@ const Label = ({
       ${type && `uk-label-${type}`}
     `}
   >
-    {label}
+    {children}
   </span>
 )
 
@@ -21,7 +21,7 @@ Label.propTypes = {
     'warning',
     'danger'
   ]),
-  label: PropTypes.string
+  children: PropTypes.node
 }
 
 export default Label
