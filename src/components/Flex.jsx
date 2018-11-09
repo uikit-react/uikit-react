@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 const Flex = ({
   children,
@@ -12,14 +13,18 @@ const Flex = ({
   itemOrder,
   itemDimensions
 }) => {
-  let flexClasses = isInline ? 'uk-flex-inline' : 'uk-flex'
-  if (wrapModifiers) flexClasses += ` uk-flex-${wrapModifiers}`
-  else if (wrapModifiersAlignment) flexClasses += ` uk-flex-${wrapModifiersAlignment}`
-  else if (horizontalAlignement) flexClasses += ` uk-flex-${horizontalAlignement}`
-  else if (verticalAlignement) flexClasses += ` uk-flex-${verticalAlignement}`
-  else if (directionModifiers) flexClasses += ` uk-flex-${directionModifiers}`
-  else if (itemOrder) flexClasses += ` uk-flex-${itemOrder}`
-  else if (itemDimensions) flexClasses += ` uk-flex-${itemDimensions}`
+  let flexClasses = classnames({
+    'uk-flex-inline': isInline,
+    'uk-flex': !isInline,
+    [`uk-flex-${wrapModifiers}`]: wrapModifiers,
+    [`uk-flex-${wrapModifiersAlignment}`]: wrapModifiersAlignment,
+    [`uk-flex-${horizontalAlignement}`]: horizontalAlignement,
+    [`uk-flex-${verticalAlignement}`]: verticalAlignement,
+    [`uk-flex-${directionModifiers}`]: directionModifiers,
+    [`uk-flex-${wrapModifiersAlignment}`]: wrapModifiersAlignment,
+    [`uk-flex-${itemDimensions}`]: itemDimensions,
+    [`uk-flex-${itemOrder}`]: itemOrder
+  })
 
   return (
     <div
