@@ -11,22 +11,24 @@ const Flex = ({
   wrapModifiersAlignment,
   itemOrder,
   itemDimensions
-}) => (
-  <div
-    className={`
-      ${isInline ? 'uk-flex-inline' : 'uk-flex'} 
-      ${wrapModifiers && `uk-flex-${wrapModifiers}`} 
-      ${wrapModifiersAlignment && `uk-flex-${wrapModifiersAlignment}`} 
-      ${horizontalAlignement && `uk-flex-${horizontalAlignement}`} 
-      ${verticalAlignement && `uk-flex-${verticalAlignement}`} 
-      ${directionModifiers && `uk-flex-${directionModifiers}`} 
-      ${itemOrder && `uk-flex-${itemOrder}`} 
-      ${itemDimensions && `uk-flex-${itemDimensions}`} 
-    `}
-  >
-    {children}
-  </div>
-)
+}) => {
+  let flexClasses = isInline ? 'uk-flex-inline' : 'uk-flex'
+  if (wrapModifiers) flexClasses += ` uk-flex-${wrapModifiers}`
+  else if (wrapModifiersAlignment) flexClasses += ` uk-flex-${wrapModifiersAlignment}`
+  else if (horizontalAlignement) flexClasses += ` uk-flex-${horizontalAlignement}`
+  else if (verticalAlignement) flexClasses += ` uk-flex-${verticalAlignement}`
+  else if (directionModifiers) flexClasses += ` uk-flex-${directionModifiers}`
+  else if (itemOrder) flexClasses += ` uk-flex-${itemOrder}`
+  else if (itemDimensions) flexClasses += ` uk-flex-${itemDimensions}`
+
+  return (
+    <div
+      className={flexClasses}
+    >
+      {children}
+    </div>
+  )
+}
 
 Flex.propTypes = {
   children: PropTypes.node,

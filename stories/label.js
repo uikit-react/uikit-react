@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Label from './../src/components/Label'
+import { Label } from './../src/components'
 
 storiesOf('Label', module)
   .add('Standard', () => (
