@@ -5,7 +5,7 @@ import { Subnav } from '../src/components'
 
 storiesOf('Subnav', module)
   .add('Default', () => (
-    <Subnav>
+    <Subnav className='uk-margin'>
       <li className='uk-active'><a href='#'>Active</a></li>
       <li><a href='#'>Item</a></li>
       <li><a href='#'>Item</a></li>
@@ -13,7 +13,10 @@ storiesOf('Subnav', module)
     </Subnav>
   ))
   .add('Divider', () => (
-    <Subnav divider>
+    <Subnav
+      className='uk-margin'
+      divider
+    >
       <li className='uk-active'><a href='#'>Active</a></li>
       <li><a href='#'>Item</a></li>
       <li><a href='#'>Item</a></li>
