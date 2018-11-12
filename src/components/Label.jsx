@@ -1,19 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 const Label = ({
   type,
   children
-}) => (
-  <span
-    className={`
-      uk-label 
-      ${type && `uk-label-${type}`}
-    `}
-  >
-    {children}
-  </span>
-)
+}) => {
+  const labelClasses = classnames({
+    'uk-label': true,
+    [`uk-label-${type}`]: type
+  })
+
+  return (
+    <span
+      className={labelClasses}
+    >
+      {children}
+    </span>
+  )
+}
 
 Label.propTypes = {
   type: PropTypes.oneOf([
