@@ -4,11 +4,13 @@ import classnames from 'classnames'
 
 const Tile = ({
   children,
-  type
+  type,
+  padding
 }) => {
   const flexClasses = classnames({
     'uk-tile': true,
-    [`uk-tile-${type}`]: type
+    [`uk-tile-${type}`]: type,
+    [`uk-tile-${padding}`]: padding
   })
 
   return (
@@ -19,13 +21,21 @@ const Tile = ({
 }
 
 Tile.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
   type: PropTypes.oneOf([
     'default',
     'muted',
     'primary',
     'secondary'
-  ]).isRequired
+  ]).isRequired,
+  padding: PropTypes.oneOf([
+    'remove',
+    'small',
+    'large'
+  ])
 }
 
 export default Tile

@@ -27,3 +27,28 @@ storiesOf('Tile', module)
       type='secondary'
     />
   ))
+  .add('Padding', () => (
+    <div className='uk-child-width-1-3@s uk-grid-small uk-text-center uk-grid'>
+      <div>
+        <Tile
+          children='Remove'
+          type='muted'
+          padding='remove'
+        />
+      </div>
+      <div>
+        <Tile
+          children='Small'
+          type='primary'
+          padding='small'
+        />
+      </div>
+      <div>
+        <Tile
+          children='Large'
+          type='secondary'
+          padding='large'
+        />
+      </div>
+    </div>
+  ))
