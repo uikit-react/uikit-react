@@ -1,15 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Subnav } from '../src/components'
+import { Subnav, SubnavItem } from '../src/components'
 
 storiesOf('Subnav', module)
   .add('Default', () => (
     <Subnav className='uk-margin'>
-      <li className='uk-active'><a href='#'>Active</a></li>
-      <li><a href='#'>Item</a></li>
-      <li><a href='#'>Item</a></li>
-      <li><span>Disabled</span></li>
+      <SubnavItem children='Active' active />
+      <SubnavItem children='Item' />
+      <SubnavItem children='Item' />
+      <SubnavItem children='Disabled' disabled />
     </Subnav>
   ))
   .add('Divider', () => (
@@ -17,15 +17,15 @@ storiesOf('Subnav', module)
       className='uk-margin'
       divider
     >
-      <li className='uk-active'><a href='#'>Active</a></li>
-      <li><a href='#'>Item</a></li>
-      <li><a href='#'>Item</a></li>
+      <SubnavItem children='Active' active />
+      <SubnavItem children='Item' />
+      <SubnavItem children='Item' />
     </Subnav>
   ))
   .add('Pill', () => (
     <Subnav pill>
-      <li className='uk-active'><a href='#'>Active</a></li>
-      <li><a href='#'>Item</a></li>
-      <li><a href='#'>Item</a></li>
+      <SubnavItem children='Active' active />
+      <SubnavItem children='Item' />
+      <SubnavItem children='Item' />
     </Subnav>
   ))

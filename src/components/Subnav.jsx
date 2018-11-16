@@ -25,8 +25,8 @@ Subnav.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  divider: PropTypes.string,
-  pill: PropTypes.string
+  divider: PropTypes.bool,
+  pill: PropTypes.bool
 }
 
 export default Subnav
