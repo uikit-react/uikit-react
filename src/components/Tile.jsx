@@ -7,24 +7,21 @@ const Tile = ({
   type,
   padding
 }) => {
-  const flexClasses = classnames({
+  const classes = classnames({
     'uk-tile': true,
     [`uk-tile-${type}`]: type,
     [`uk-tile-${padding}`]: padding
   })
 
   return (
-    <div className={flexClasses}>
+    <div className={classes}>
       {children}
     </div>
   )
 }
 
 Tile.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]),
+  children: PropTypes.element.isRequired,
   type: PropTypes.oneOf([
     'default',
     'muted',

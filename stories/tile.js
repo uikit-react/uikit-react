@@ -5,25 +5,25 @@ import { Tile } from '../src/components'
 storiesOf('Tile', module)
   .add('Default', () => (
     <Tile
-      children='Default'
+      children={<p className='uk-h4'>Default</p>}
       type='default'
     />
   ))
   .add('Muted', () => (
     <Tile
-      children='Muted'
+      children={<p className='uk-h4'>Muted</p>}
       type='muted'
     />
   ))
   .add('Primary', () => (
     <Tile
-      children='Primary'
+      children={<p className='uk-h4'>Primary</p>}
       type='primary'
     />
   ))
   .add('Secondary', () => (
     <Tile
-      children='Secondary'
+      children={<p className='uk-h4'>Secondary</p>}
       type='secondary'
     />
   ))
@@ -31,21 +31,21 @@ storiesOf('Tile', module)
     <div className='uk-child-width-1-3@s uk-grid-small uk-text-center uk-grid'>
       <div>
         <Tile
-          children='Remove'
+          children={<p className='uk-h4'>Remove</p>}
           type='muted'
           padding='remove'
         />
       </div>
       <div>
         <Tile
-          children='Small'
+          children={<p className='uk-h4'>Small</p>}
           type='primary'
           padding='small'
         />
       </div>
       <div>
         <Tile
-          children='Large'
+          children={<p className='uk-h4'>Large</p>}
           type='secondary'
           padding='large'
         />
