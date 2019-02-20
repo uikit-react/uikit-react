@@ -8,7 +8,11 @@ storiesOf('Section', module)
     <Section>
       <div className='uk-container'>
         <h3>Section</h3>
+<<<<<<< HEAD
         <div className='uk-grid-match uk-child-width-1-3@m'>
+=======
+        <div className='uk-grid-match uk-child-width-1-3@m' uk-grid>
+>>>>>>> finished section component
           <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
           </div>
@@ -26,7 +30,11 @@ storiesOf('Section', module)
     <Section styleModifiers='muted'>
       <div className='uk-container'>
         <h3>Section</h3>
+<<<<<<< HEAD
         <div className='uk-grid-match uk-child-width-1-3@m'>
+=======
+        <div className='uk-grid-match uk-child-width-1-3@m' uk-grid>
+>>>>>>> finished section component
           <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
           </div>
@@ -44,7 +52,11 @@ storiesOf('Section', module)
     <Section styleModifiers='primary'>
       <div className='uk-container'>
         <h3>Section</h3>
+<<<<<<< HEAD
         <div className='uk-grid-match uk-child-width-1-3@m'>
+=======
+        <div className='uk-grid-match uk-child-width-1-3@m' uk-grid>
+>>>>>>> finished section component
           <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
           </div>
@@ -62,7 +74,11 @@ storiesOf('Section', module)
     <Section styleModifiers='secondary'>
       <div className='uk-container'>
         <h3>Section</h3>
+<<<<<<< HEAD
         <div className='uk-grid-match uk-child-width-1-3@m'>
+=======
+        <div className='uk-grid-match uk-child-width-1-3@m' uk-grid>
+>>>>>>> finished section component
           <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
           </div>
@@ -81,7 +97,11 @@ storiesOf('Section', module)
       <Section styleModifiers='primary' sizeModifier='xsmall' overlap>
         <div className='uk-container'>
           <h3>xsmall</h3>
+<<<<<<< HEAD
           <div className='uk-grid-match uk-child-width-1-3@m'>
+=======
+          <div className='uk-grid-match uk-child-width-1-3@m' uk-grid>
+>>>>>>> finished section component
             <div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
@@ -97,7 +117,11 @@ storiesOf('Section', module)
       <Section styleModifiers='secondary' sizeModifier='small' overlap>
         <div className='uk-container'>
           <h3>small</h3>
+<<<<<<< HEAD
           <div className='uk-grid-match uk-child-width-1-3@m'>
+=======
+          <div className='uk-grid-match uk-child-width-1-3@m' uk-grid>
+>>>>>>> finished section component
             <div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
@@ -113,7 +137,11 @@ storiesOf('Section', module)
       <Section styleModifiers='primary' sizeModifier='large' overlap>
         <div className='uk-container'>
           <h3>large</h3>
+<<<<<<< HEAD
           <div className='uk-grid-match uk-child-width-1-3@m'>
+=======
+          <div className='uk-grid-match uk-child-width-1-3@m' uk-grid>
+>>>>>>> finished section component
             <div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
@@ -129,7 +157,11 @@ storiesOf('Section', module)
       <Section styleModifiers='secondary' sizeModifier='xlarge' overlap>
         <div className='uk-container'>
           <h3>xlarge</h3>
+<<<<<<< HEAD
           <div className='uk-grid-match uk-child-width-1-3@m'>
+=======
+          <div className='uk-grid-match uk-child-width-1-3@m' uk-grid>
+>>>>>>> finished section component
             <div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>

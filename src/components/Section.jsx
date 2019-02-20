@@ -30,15 +30,24 @@ Section.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
+<<<<<<< HEAD
   ]).isRequired,
+=======
+  ]),
+>>>>>>> finished section component
   styleModifiers: PropTypes.oneOf([
     'default',
     'muted',
     'primary',
     'secondary'
   ]),
+<<<<<<< HEAD
   preserveColor: PropTypes.bool,
   overlap: PropTypes.bool,
+=======
+  preserveColor: PropTypes.bool.isRequired,
+  overlap: PropTypes.bool.isRequired,
+>>>>>>> finished section component
   sizeModifier: PropTypes.oneOf([
     'xsmall',
     'small',
