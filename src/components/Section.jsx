@@ -30,15 +30,15 @@ Section.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ]),
+  ]).isRequired,
   styleModifiers: PropTypes.oneOf([
     'default',
     'muted',
     'primary',
     'secondary'
   ]),
-  preserveColor: PropTypes.bool.isRequired,
-  overlap: PropTypes.bool.isRequired,
+  preserveColor: PropTypes.bool,
+  overlap: PropTypes.bool,
   sizeModifier: PropTypes.oneOf([
     'xsmall',
     'small',
