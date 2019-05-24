@@ -1,9 +1,10 @@
 import { configure } from '@storybook/react';
+import Uikit from 'uikit'
 
 // Import uikit css for now
-import '../node_modules/uikit/dist/css/uikit.min.css'
-import '../node_modules/uikit/dist/js/uikit.js'
-import '../node_modules/uikit/dist/js/uikit-icons.min.js'
+import Icons from 'uikit/dist/js/uikit-icons'
+import 'uikit/dist/css/uikit.css'
+Uikit.use(Icons)
 
 const req = require.context('../stories', true, /.js$/)
 

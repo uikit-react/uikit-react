@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+
 import { Search } from '../src/components'
 
 storiesOf('Search', module)
@@ -12,5 +13,11 @@ storiesOf('Search', module)
     <Search
       placeholder='Default'
       withIcon
+    />
+  ))
+  .add('Icon clickable', () => (
+    <Search
+      placeholder='Default'
+      withIconClickable
     />
   ))

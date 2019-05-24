@@ -1,32 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
 
 const Search = ({
   placeholder,
   withIcon,
   withIconClickable,
-  isIconFliped,
-  modifier
+  modifier,
+  href,
+  onChange
 }) => (
-  <form className={`uk-search-${modifier}`}>
-    {withIcon && !withIconClickable && <span uk-icon='search' />}
-    {withIconClickable && !withIcon && <a uk-search-icon className={classNames('uk-search-icon-flip', isIconFliped)} />}
-    <input className='uk-search-input' type='search' placeholder={placeholder} />
-  </form>
+  <div className='uk-margin'>
+    <form className={`uk-search uk-search-${modifier}`}>
+      {withIcon && !withIconClickable && <span className='uk-search-icon' data-uk-icon='icon: search' />}
+      {withIconClickable && !withIcon && <a className='uk-search-icon' href={href}><span data-uk-icon='icon: search' /></a>}
+      <input className='uk-search-input' type='search' placeholder={placeholder} onChange={onChange} />
+    </form>
+  </div>
 )
 
 Search.propTypes = {
   withIcon: PropTypes.bool,
   withIconClickable: PropTypes.bool,
   placeholder: PropTypes.string,
-  isIconFliped: PropTypes.bool,
   modifier: PropTypes.oneOfType([
     'default',
     'large',
     'navbar',
     'toggle'
-  ])
+  ]),
+  href: PropTypes.string,
+  onChange: PropTypes.onChange
 }
 
 Search.defaultProps = {
@@ -34,7 +37,9 @@ Search.defaultProps = {
   isIconFliped: false,
   withIcon: false,
   withIconClickable: false,
-  modifier: 'default'
+  modifier: 'default',
+  href: '',
+  onChange: () => null
 }
 
 export default Search
