@@ -9,13 +9,13 @@ const Section = ({
   sizeModifier,
   overlap
 }) => {
-  const classes = classnames({
-    'uk-section': true,
-    'uk-preserve-color': preserveColor,
-    'uk-section-overlap': overlap,
-    [`uk-section-${styleModifiers}`]: styleModifiers,
-    [`uk-section-${sizeModifier}`]: sizeModifier
-  })
+  const classes = classnames(
+    'uk-section',
+    { 'uk-preserve-color': preserveColor },
+    { 'uk-section-overlap': overlap },
+    { [`uk-section-${styleModifiers}`]: styleModifiers },
+    { [`uk-section-${sizeModifier}`]: sizeModifier }
+  )
 
   return (
     <div className={classes}>
