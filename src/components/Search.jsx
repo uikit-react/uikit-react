@@ -1,17 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const withNavbar = (Component) => (props) => ( // export in a seperate file if redundant
-  props.modifier === 'navbar'
-    ? (
-      <nav className='uk-navbar-container' uk-navbar>
-        <div className='uk-navbar-left'>
-          <Component {...props} />
-        </div>
-      </nav>
-    ) : <Component {...props} />
-)
-
 const Search = ({
   placeholder,
   withIcon,
@@ -74,4 +63,4 @@ Search.defaultProps = {
   toggle: false
 }
 
-export default withNavbar(Search)
+export default Search
