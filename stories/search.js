@@ -21,3 +21,10 @@ storiesOf('Search', module)
       withIconClickable
     />
   ))
+  .add('Navbar modifier', () => (
+    <Search
+      placeholder='Default'
+      withIconClickable
+      modifier='navbar'
+    />
+  ))

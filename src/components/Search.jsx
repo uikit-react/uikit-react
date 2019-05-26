@@ -1,6 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const withNavbar = (Component) => (props) => ( // export in a seperate file if redundant
+  props.modifier === 'navbar'
+    ? (
+      <nav className='uk-navbar-container' uk-navbar>
+        <div className='uk-navbar-left'>
+          <Component {...props} />
+        </div>
+      </nav>
+    ) : <Component {...props} />
+)
+
 const Search = ({
   placeholder,
   withIcon,
@@ -8,15 +19,36 @@ const Search = ({
   modifier,
   href,
   onChange
-}) => (
-  <div className='uk-margin'>
-    <form className={`uk-search uk-search-${modifier}`}>
-      {withIcon && !withIconClickable && <span className='uk-search-icon' data-uk-icon='icon: search' />}
-      {withIconClickable && !withIcon && <a className='uk-search-icon' href={href}><span data-uk-icon='icon: search' /></a>}
-      <input className='uk-search-input' type='search' placeholder={placeholder} onChange={onChange} />
-    </form>
-  </div>
-)
+}) => {
+  if (withIconClickable) {
+    return (
+      <div className={`uk-${modifier === 'navbar' ? 'navbar-item' : 'margin'}`}>
+        <form className={`uk-search uk-search-${modifier}`}>
+          <a className='uk-search-icon' href={href}><span data-uk-icon='icon: search' /></a>
+          <input className='uk-search-input' type='search' placeholder={placeholder} onChange={onChange} />
+        </form>
+      </div>
+    )
+  } else if (withIcon) {
+    return (
+      <div className='uk-margin'>
+        <form className={`uk-search uk-search-${modifier}`}>
+          <span className='uk-search-icon' data-uk-icon='icon: search' />
+          <input className='uk-search-input' type='search' placeholder={placeholder} onChange={onChange} />
+        </form>
+      </div>
+    )
+  }
+
+  return (
+    <div className='uk-margin'>
+      <form className={`uk-search uk-search-${modifier}`}>
+        <input className='uk-search-input' type='search' placeholder={placeholder} onChange={onChange} />
+      </form>
+    </div>
+
+  )
+}
 
 Search.propTypes = {
   withIcon: PropTypes.bool,
@@ -25,8 +57,7 @@ Search.propTypes = {
   modifier: PropTypes.oneOfType([
     'default',
     'large',
-    'navbar',
-    'toggle'
+    'navbar'
   ]),
   href: PropTypes.string,
   onChange: PropTypes.onChange
@@ -39,7 +70,8 @@ Search.defaultProps = {
   withIconClickable: false,
   modifier: 'default',
   href: '',
-  onChange: () => null
+  onChange: () => null,
+  toggle: false
 }
 
-export default Search
+export default withNavbar(Search)
