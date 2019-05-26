@@ -4,7 +4,7 @@
   "description": "uikit react components",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 9000 -c .storybook",
+    "start": "start-storybook -p 9000 -c .storybook",
     "test": "eslint --ext .jsx --ext .js ."
   },
   "repository": {
@@ -18,14 +18,15 @@
   },
   "homepage": "https://github.com/uikit-react/uikit-react#readme",
   "devDependencies": {
-    "@storybook/react": "^3.4.11",
+    "@storybook/addon-actions": "^5.0.1",
+    "@storybook/react": "^5.0.1",
     "babel-core": "^6.26.3",
-    "clean-webpack-plugin": "^0.1.19",
+    "clean-webpack-plugin": "^2.0.0",
     "eslint": "^5.6.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
